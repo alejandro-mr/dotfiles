@@ -1,0 +1,129 @@
+!-------------------------------------------------------------------------------
+! Rofi colors
+!-------------------------------------------------------------------------------
+!                  bg         border   separatori
+rofi.color-window: #dd002b36, #002b36, #dd073642
+!                  bg         fg       altbg      hlbg       hlfg
+rofi.color-normal: #dd002b36, #839496, #00002b36, #dd073642, #859900
+rofi.color-active: #dd002b36, #268bd2, #00002b36, #dd073642, #268bd2
+rofi.color-urgent: #dd002b36, #d33682, #00002b36, #dd073642, #d33682
+
+
+!-------------------------------------------------------------------------------
+! Xft settings
+!-------------------------------------------------------------------------------
+
+Xft.dpi:                96
+Xft.antialias:          true
+Xft.rgba:               rgb
+Xft.hinting:            true
+Xft.hintstyle:          hintslight
+Xft.autohint:           0
+Xft.lcdfilter:          lcddefault
+
+
+! Custom theme
+#define c_dark          #191919
+#define c_second_dark   #131118
+#define c_dark_blue     #031128
+#define c_primary       #035188
+#define c_secondary     #0574AB
+#define c_pink_medium   #F0A7A0
+#define c_text          #F7F3ED
+#define c_text_inactive #87838D
+#define c_pink_light    #D7D3CD
+#define c_pink_strong   #F17A77
+#define c_cyan_text     #41848F
+#define c_urgent        #035188
+
+! Solarized theme
+! Common
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+! Dark
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+!! black dark/light
+*color0:                S_base02
+*color8:                S_base03
+
+!! red dark/light
+*color1:                S_red
+*color9:                S_orange
+
+!! green dark/light
+*color2:                S_green
+*color10:               S_base01
+
+!! yellow dark/light
+*color3:                S_yellow
+*color11:               S_base00
+
+!! blue dark/light
+*color4:                S_blue
+*color12:               S_base0
+
+!! magenta dark/light
+*color5:                S_magenta
+*color13:               S_violet
+
+!! cyan dark/light
+*color6:                S_cyan
+*color14:               S_base1
+
+!! white dark/light
+*color7:                S_base2
+*color15:               S_base3
+
+*background:            S_base03
+*foreground:            S_base00
+*fadeColor:             S_base03
+*cursorColor:           S_base1
+*pointerColorBackground:S_base01
+*pointerColorForeground:S_base1
+
+URxvt.geometry: 90x30
+URxvt.buffered: true
+!URxvt.background: S_base03
+!URxvt.foreground: S_base0
+!URxvt.cursorColor: S_base1
+!URxvt.underlineColor: S_yellow
+URxvt.foreground: c_pink_light
+URxvt.cursorColor: c_pink_medium
+URxvt.underlineColor: S_yellow
+URxvt.lineSpace: 0
+URxvt*font: xft:Source Code Pro for Powerline:pixelsize=15:antialias=true:hinting=true
+URxvt*letterSpace: -1
+URxvt.scrollBar: false
+
+!------------
+!True Transparency
+!------------
+!set to 32-bit for real transparency (compositing required (see xcompmgr)
+URxvt.depth: 32
+!transparent=0000 opaque=ffff
+!URxvt.background: [70]#0A1C28
+URxvt.background: [75]c_dark_blue
+
+
+!------------------
+!False tranparency
+!------------------
+!URxvt.transparent: true
+!URxvt.shading: 50
+
+Urxvt.secondaryScroll:  true    !Enable Shift-PageUp/Down in screen

@@ -1,0 +1,288 @@
+#Color scheme
+set $c_dark          #191919
+set $c_second_dark   #131118
+set $c_dark_blue     #0A1C28
+set $c_primary       #035188
+set $c_secondary     #0574AB
+set $c_pink_medium   #F0A7A0
+set $c_text          #F7F3ED
+set $c_text_inactive #87838D
+set $c_pink_light    #D7D3CD
+set $c_pink_strong   #F17A77
+set $c_cyan_text     #41848F
+
+set $c_urgent        #035188
+
+#color scheme solarized
+#set $c_solarized_bg          #002029
+#set $c_solarized_active      #f7f7ef
+#set $c_solarized_inactive    #767674
+#set $c_solarized_urgent      #e75959
+
+### Variables
+#
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+# Your preferred terminal emulator
+set $term urxvt
+# Your preferred application launcher
+set $menu rofi -show drun
+
+### Output configuration
+#
+# Default wallpaper (more resolutions are available in /usr/share/sway/)
+#output * bg ~/.wallpapers/1511737780687.jpg fill
+#
+# Example configuration:
+#
+#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+#
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+new_window none
+hide_edge_borders both
+
+
+### Input configuration
+#
+# Example configuration:
+#
+#   input "2:14:SynPS/2_Synaptics_TouchPad" {
+#       dwt enabled
+#       tap enabled
+#       natural_scroll enabled
+#       middle_emulation enabled
+#   }
+#
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# Read `man 5 sway-input` for more information about this section.
+
+### Key bindings
+#
+# Basics:
+#
+    # start a terminal
+    bindsym $mod+Return exec $term
+
+    # kill focused window
+    bindsym $mod+Shift+q kill
+
+    # start your launcher
+    bindsym $mod+d exec --no-startup-id $menu
+    bindsym $mod+Shift+d exec --no-startup-id rofi -show ssh
+
+    # Drag floating windows by holding down $mod and left mouse button.
+    # Resize them with right mouse button + $mod.
+    # Despite the name, also works for non-floating windows.
+    # Change normal to inverse to use left mouse button for resizing and right
+    # mouse button for dragging.
+    floating_modifier $mod
+
+    # reload the configuration file
+    bindsym $mod+Shift+c reload
+
+    # exit sway (logs you out of your wayland session)
+    bindsym $mod+Shift+e exit
+#
+# Moving around:
+#
+    # Move your focus around
+    bindsym $mod+$left focus left
+    bindsym $mod+$down focus down
+    bindsym $mod+$up focus up
+    bindsym $mod+$right focus right
+    # or use $mod+[up|down|left|right]
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+
+    # _move_ the focused window with the same, but add Shift
+    bindsym $mod+Shift+$left move left
+    bindsym $mod+Shift+$down move down
+    bindsym $mod+Shift+$up move up
+    bindsym $mod+Shift+$right move right
+    # ditto, with arrow keys
+    bindsym $mod+Shift+Left move left
+    bindsym $mod+Shift+Down move down
+    bindsym $mod+Shift+Up move up
+    bindsym $mod+Shift+Right move right
+#
+# Workspaces:
+#
+set $ws1    "   Code "
+set $ws2    "   Chromium "
+set $ws3    "   Incognito "
+set $ws4    "   Terminal "
+set $ws5    "   Docker "
+set $ws6    "   Media "
+set $ws7    "   Design "
+set $ws8    "   Chat "
+set $ws9    "   General "
+set $ws10   "   Settings "
+    # switch to workspace
+    bindsym $mod+1 workspace $ws1
+    bindsym $mod+2 workspace $ws2
+    bindsym $mod+3 workspace $ws3
+    bindsym $mod+4 workspace $ws4
+    bindsym $mod+5 workspace $ws5
+    bindsym $mod+6 workspace $ws6
+    bindsym $mod+7 workspace $ws7
+    bindsym $mod+8 workspace $ws8
+    bindsym $mod+9 workspace $ws9
+    bindsym $mod+0 workspace $ws10
+    # move focused container to workspace
+    bindsym $mod+Shift+1 move container to workspace $ws1
+    bindsym $mod+Shift+2 move container to workspace $ws2
+    bindsym $mod+Shift+3 move container to workspace $ws3
+    bindsym $mod+Shift+4 move container to workspace $ws4
+    bindsym $mod+Shift+5 move container to workspace $ws5
+    bindsym $mod+Shift+6 move container to workspace $ws6
+    bindsym $mod+Shift+7 move container to workspace $ws7
+    bindsym $mod+Shift+8 move container to workspace $ws8
+    bindsym $mod+Shift+9 move container to workspace $ws9
+    bindsym $mod+Shift+0 move container to workspace $ws10
+    # Note: workspaces can have any name you want, not just numbers.
+    # We just use 1-10 as the default.
+#
+# Layout stuff:
+#
+    # You can "split" the current object of your focus with
+    # $mod+b or $mod+v, for horizontal and vertical splits
+    # respectively.
+    bindsym $mod+b split h
+    bindsym $mod+v split v
+
+    # Switch the current container between different layout styles
+    bindsym $mod+s layout stacking
+    bindsym $mod+w layout tabbed
+    bindsym $mod+e layout toggle split
+
+    # Make the current focus fullscreen
+    bindsym $mod+f fullscreen
+
+    # Toggle the current focus between tiling and floating mode
+    bindsym $mod+Shift+space floating toggle
+
+    # Swap focus between the tiling area and the floating area
+    bindsym $mod+space focus mode_toggle
+
+    # move focus to the parent container
+    bindsym $mod+a focus parent
+#
+# Scratchpad:
+#
+    # Sway has a "scratchpad", which is a bag of holding for windows.
+    # You can send windows there and get them back later.
+
+    # Move the currently focused window to the scratchpad
+    bindsym $mod+Shift+minus move scratchpad
+
+    # Show the next scratchpad window or hide the focused scratchpad window.
+    # If there are multiple scratchpad windows, this command cycles through them.
+    bindsym $mod+minus scratchpad show
+#
+# Resizing containers:
+#
+mode "resize" {
+    # left will shrink the containers width
+    # right will grow the containers width
+    # up will shrink the containers height
+    # down will grow the containers height
+    bindsym $left resize shrink width 10 px or 10 ppt
+    bindsym $down resize grow height 10 px or 10 ppt
+    bindsym $up resize shrink height 10 px or 10 ppt
+    bindsym $right resize grow width 10 px or 10 ppt
+
+    # ditto, with arrow keys
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+
+    # return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+#                        border          background      text              indicator
+client.focused           $c_primary      $c_primary      $c_text           $c_text
+client.focused_inactive  $c_dark         $c_dark         $c_text_inactive  $c_dark
+client.unfocused         $c_dark         $c_dark         $c_text           $c_dark
+client.urgent            $c_pink_strong  $c_pink_strong  $c_text           $c_pink_strong
+
+#
+# Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+  font pango: Source Code Pro for Powerline 10
+  #font pango: Noto Mono, FontAwesome 10
+  status_command i3blocks
+  colors {
+    background  $c_second_dark
+    separator   $c_second_dark
+    statusline  $c_text
+    #                  border          background      text
+    active_workspace   $c_dark         $c_dark         $c_text
+    focused_workspace  $c_primary      $c_primary      $c_text
+    inactive_workspace $c_dark         $c_dark         $c_text_inactive
+    urgent_workspace   $c_pink_strong  $c_pink_strong  $c_text
+  }
+  workspace_buttons yes 
+}
+
+### Font configuration
+font pango:Source Code Pro for Powerline 10
+
+#
+# Pulse audio controls
+#
+bindsym XF86AudioRaiseVolume  exec --no-startup-id amixer -q -D pulse sset Master 5%+ unmute
+bindsym XF86AudioLowerVolume  exec --no-startup-id amixer -q -D pulse sset Master 5%- unmute
+bindsym XF86AudioMute         exec --no-startup-id amixer -q -D pulse sset Master toggle
+
+#
+# brightness control
+#
+bindsym XF86MonBrightnessUp   exec brightnessctl s 5+ 
+bindsym XF86MonBrightnessDown exec brightnessctl s 5-
+
+### Gaps
+gaps outer 0
+gaps inner 6
+smart_gaps on
+
+exec xrdb ~/.Xresources
+#exec compton ~/.config/compton.conf
+exec --no-startup-id compton --opacity-rule '100:window_type = "dock" && class_g = "i3bar"' --config ~/.config/compton.conf -b
+exec --no-startup-id setxkbmap -layout latam -model pc101
+
+# i3locks
+set $Locker i3lock && sleep 1
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+Pause mode "$mode_system"
+
+#client.focused #859900 #859900 #fdf6e3 #6c71c4
+#client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
+#client.unfocused #073642 #073642 #93a1a1 #586e75
+#client.urgent #d33682 #d33682 #fdf6e3 #dc322f
