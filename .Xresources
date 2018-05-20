@@ -21,10 +21,10 @@ Emacs.FontBackend: xft
 !-------------------------------------------------------------------------------
 
 Xft.dpi:                96
-Xft.antialias:          rgba
+Xft.antialias:          1
 Xft.rgba:               rgb
-Xft.hinting:            true
-Xft.hintstyle:          hintfull
+Xft.hinting:            1
+Xft.hintstyle:          hintslight
 Xft.autohint:           0
 Xft.lcdfilter:          lcddefault
 

@@ -31,12 +31,12 @@ set $right l
 # Your preferred terminal emulator
 set $term urxvt
 # Your preferred application launcher
-set $menu dmenu_run -nb '#131118' -sf '#F7F3ED' -sb '#035188' -nf '#87838D'
+set $menu dmenu_run -nb '#131118' -sf '#F7F3ED' -sb '#035188' -nf '#87838D' -fn 'Source Code Pro for Powerline-10' -b
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/sway/)
-output * bg ~/.wallpapers/blue-red-sky.jpg fill
+output * bg ~/.wallpapers/space_vortex_4k.jpg fill
 default_border none
 output LVDS1 scale 1
 #output LVDS-1 pos 0 0 res 1600x900
@@ -217,6 +217,7 @@ bar {
   font pango: Source Code Pro for Powerline 10
   #font pango: Noto Mono, FontAwesome 10
   status_command i3blocks
+  position top
   colors {
     background  $c_second_dark
     separator   $c_dark_blue
