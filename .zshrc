@@ -39,7 +39,7 @@ antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle joel-porquet/zsh-dircolors-solarized.git
 
 # Load the theme.
-antigen theme dst
+antigen theme terminalparty
 
 # Tell Antigen that you're done.
 antigen apply
