@@ -8,32 +8,32 @@ antigen bundle archlinux
 antigen bundle git
 antigen bundle git-extras
 antigen bundle mercurial
-antigen bundle pip
-antigen bundle lein
-antigen bundle command-not-found
+#antigen bundle pip
+#antigen bundle lein
+#antigen bundle command-not-found
 antigen bundle battery
 #antigen bundle nyan
 
 # Develop
 antigen bundle golang
-antigen bundle heroku
+#antigen bundle heroku
 antigen bundle github
 antigen bundle docker
 antigen bundle docker-compose
 
 # Ruby
-antigen bundle rbenv
+#antigen bundle rbenv
 
 # Node Plugins
-antigen bundle node
-antigen bundle npm
-antigen bundle nvm
+#antigen bundle node
+#antigen bundle npm
+#antigen bundle nvm
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
+#antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-history-substring-search
+#antigen bundle zsh-users/zsh-history-substring-search
 
 # zsh-dircolors-solarized
 antigen bundle joel-porquet/zsh-dircolors-solarized.git
