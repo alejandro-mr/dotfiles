@@ -219,7 +219,7 @@ bar {
   status_command i3blocks
   colors {
     background  $c_second_dark
-    separator   $c_second_dark
+    separator   $c_dark_blue
     statusline  $c_text
     #                  border          background      text
     active_workspace   $c_dark         $c_dark         $c_text
