@@ -123,9 +123,8 @@ Urxvt.secondaryScroll:  true    !Enable Shift-PageUp/Down in screen
 ! Emacs settings
 !-------------------------------------------------------------------------------
 
-!Emacs.font: Source Code Pro for
-Powerline:pixelsize=13:antialias=true:hinting=true
-!Emacs.FontBackend: xft
+Emacs.font: Source Code Pro for Powerline:pixelsize=13:antialias=true:hinting=true
+Emacs.FontBackend: xft
 
 !-------------------------------------------------------------------------------
 ! Xft settings
