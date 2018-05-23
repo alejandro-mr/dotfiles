@@ -13,7 +13,7 @@ rofi.color-urgent: #dd002b36, #d33682, #00002b36, #dd073642, #d33682
 ! Emacs settings
 !-------------------------------------------------------------------------------
 
-Emacs.font: Source Code Pro for Powerline:pixelsize=15:antialias=true:hinting=true
+Emacs.font: Source Code Pro for Powerline:pixelsize=13:antialias=true:hinting=true
 Emacs.FontBackend: xft
 
 !-------------------------------------------------------------------------------
@@ -119,7 +119,7 @@ URxvt.underlineColor: S_yellow
 
 URxvt.lineSpace: 0
 URxvt.font: xft:Source Code Pro for Powerline:pixelsize=15:antialias=true:hinting=true
-!URxvt.letterSpace: -1
+URxvt.letterSpace: -1
 URxvt.scrollBar: false
 
 !------------
