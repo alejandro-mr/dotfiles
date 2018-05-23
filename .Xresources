@@ -8,27 +8,6 @@ rofi.color-normal: #dd002b36, #839496, #00002b36, #dd073642, #859900
 rofi.color-active: #dd002b36, #268bd2, #00002b36, #dd073642, #268bd2
 rofi.color-urgent: #dd002b36, #d33682, #00002b36, #dd073642, #d33682
 
-
-!-------------------------------------------------------------------------------
-! Emacs settings
-!-------------------------------------------------------------------------------
-
-Emacs.font: Source Code Pro for Powerline:pixelsize=13:antialias=true:hinting=true
-Emacs.FontBackend: xft
-
-!-------------------------------------------------------------------------------
-! Xft settings
-!-------------------------------------------------------------------------------
-
-Xft.dpi:                96
-Xft.antialias:          1
-Xft.rgba:               rgb
-Xft.hinting:            1
-Xft.hintstyle:          hintslight
-Xft.autohint:           0
-Xft.lcdfilter:          lcddefault
-
-
 ! Custom theme
 #define c_dark          #191919
 #define c_second_dark   #131118
@@ -118,8 +97,8 @@ URxvt.cursorColor: c_pink_medium
 URxvt.underlineColor: S_yellow
 
 URxvt.lineSpace: 0
-URxvt.font: xft:Source Code Pro for Powerline:pixelsize=15:antialias=true:hinting=true
-URxvt.letterSpace: -1
+URxvt*font: xft: Source Code Pro for Powerline:pixelsize=15:antialias=true:hinting=true
+URxvt*letterSpace: 0
 URxvt.scrollBar: false
 
 !------------
@@ -139,3 +118,23 @@ URxvt.background: [75]c_dark_blue
 !URxvt.shading: 50
 
 Urxvt.secondaryScroll:  true    !Enable Shift-PageUp/Down in screen
+
+!-------------------------------------------------------------------------------
+! Emacs settings
+!-------------------------------------------------------------------------------
+
+!Emacs.font: Source Code Pro for
+Powerline:pixelsize=13:antialias=true:hinting=true
+!Emacs.FontBackend: xft
+
+!-------------------------------------------------------------------------------
+! Xft settings
+!-------------------------------------------------------------------------------
+
+Xft.dpi:                96
+Xft.antialias:          1
+Xft.rgba:               rgb
+Xft.hinting:            1
+Xft.hintstyle:          hintslight
+Xft.autohint:           0
+Xft.lcdfilter:          lcddefault
