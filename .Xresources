@@ -97,7 +97,7 @@ URxvt.cursorColor: c_pink_medium
 URxvt.underlineColor: S_yellow
 
 URxvt.lineSpace: 0
-URxvt*font: xft: Source Code Pro for Powerline:pixelsize=15:antialias=true:hinting=true
+URxvt*font: xft: Source Code Pro for Powerline:pixelsize=14:antialias=true:hinting=true
 URxvt*letterSpace: 0
 URxvt.scrollBar: false
 

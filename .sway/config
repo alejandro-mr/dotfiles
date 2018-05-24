@@ -31,7 +31,7 @@ set $right l
 # Your preferred terminal emulator
 set $term urxvt
 # Your preferred application launcher
-set $menu dmenu_run -nb '#131118' -sf '#F7F3ED' -sb '#035188' -nf '#87838D' -fn 'Source Code Pro for Powerline-10' -b
+set $menu dmenu_run -nb '#131118' -sf '#F7F3ED' -sb '#035188' -nf '#87838D' -fn 'Noto Sans-10' -b
 
 ### Output configuration
 #
@@ -107,16 +107,16 @@ output LVDS1 scale 1
 #
 # Workspaces:
 #
-set $ws1    "  Code "
-set $ws2    "  Chromium "
-set $ws3    "  Incognito "
-set $ws4    "  Terminal "
-set $ws5    "  Docker "
-set $ws6    "  Todos "
-set $ws7    "  Media "
-set $ws8    "  Chat "
-set $ws9    "  General "
-set $ws10   "  Settings "
+set $ws1    "1   "
+set $ws2    "2   "
+set $ws3    "3   "
+set $ws4    "4   "
+set $ws5    "5   "
+set $ws6    "6   "
+set $ws7    "7   "
+set $ws8    "8   "
+set $ws9    "9   "
+set $ws10   "10   "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
