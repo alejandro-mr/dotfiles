@@ -259,5 +259,6 @@ gaps inner 7
 smart_gaps on
 
 exec xrdb ~/.Xresources
+exec --no-startup-id setxkbmap -layout latam -model dell101
 
 include /etc/sway/config.d/*

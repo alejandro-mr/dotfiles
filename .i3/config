@@ -230,9 +230,10 @@ bar {
   font pango: Noto Sans 10
   #font pango: Noto Mono, FontAwesome 10
   status_command i3blocks
+  position top
   colors {
     background  $c_second_dark
-    separator   $c_second_dark
+    separator   $c_dark_blue
     statusline  $c_text
     #                  border          background      text
     active_workspace   $c_dark         $c_dark         $c_text
@@ -260,14 +261,14 @@ bindsym XF86MonBrightnessUp   exec brightnessctl s 5+
 bindsym XF86MonBrightnessDown exec brightnessctl s 5-
 
 ### Gaps
-gaps outer 0
-gaps inner 6
+gaps outer -4
+gaps inner 7
 smart_gaps on
 
 exec xrdb ~/.Xresources
 #exec compton ~/.config/compton.conf
-exec --no-startup-id compton --opacity-rule '100:window_type = "dock" && class_g = "i3bar"' --config ~/.config/compton.conf -b
-exec --no-startup-id setxkbmap -layout latam -model pc101
+#exec --no-startup-id compton --opacity-rule '100:window_type = "dock" && class_g = "i3bar"' --config ~/.config/compton.conf -b
+exec --no-startup-id setxkbmap -layout latam -model dell101
 
 # i3locks
 set $Locker i3lock && sleep 1

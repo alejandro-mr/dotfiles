@@ -43,3 +43,6 @@ antigen theme terminalparty
 
 # Tell Antigen that you're done.
 antigen apply
+
+# added by travis gem
+[ -f /home/alejandro/.travis/travis.sh ] && source /home/alejandro/.travis/travis.sh

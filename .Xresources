@@ -107,15 +107,15 @@ URxvt.scrollBar: false
 !set to 32-bit for real transparency (compositing required (see xcompmgr)
 URxvt.depth: 32
 !transparent=0000 opaque=ffff
-!URxvt.background: [70]#0A1C28
-URxvt.background: [75]c_dark_blue
+URxvt.background: [70]#0A1C28
+!URxvt.background: [70]c_dark_blue
 
 
 !------------------
 !False tranparency
 !------------------
 !URxvt.transparent: true
-!URxvt.shading: 50
+!URxvt.shading: 25
 
 Urxvt.secondaryScroll:  true    !Enable Shift-PageUp/Down in screen
 
