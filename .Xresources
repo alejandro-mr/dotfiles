@@ -114,8 +114,8 @@ URxvt.background: [70]#0A1C28
 !------------------
 !False tranparency
 !------------------
-!URxvt.transparent: true
-!URxvt.shading: 25
+URxvt.transparent: true
+URxvt.shading: 25
 
 Urxvt.secondaryScroll:  true    !Enable Shift-PageUp/Down in screen
 
@@ -123,7 +123,7 @@ Urxvt.secondaryScroll:  true    !Enable Shift-PageUp/Down in screen
 ! Emacs settings
 !-------------------------------------------------------------------------------
 
-Emacs.font: Source Code Pro for Powerline:pixelsize=13:antialias=true:hinting=true
+Emacs.font: Source Code Pro for Powerline:pixelsize=14:antialias=true:hinting=true
 Emacs.FontBackend: xft
 
 !-------------------------------------------------------------------------------
